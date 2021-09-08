@@ -13,11 +13,16 @@ app.use('/img',express.static(__dirname + 'public/img'))
 
 // set template engine
 app.use(expressLayouts)
+app.set('layout','./layouts/full-width')
 app.set('view engine','ejs')
 
 // navigation
 app.get('',(req,res)=>{
     res.render('index')
+})
+
+app.get('/about',(req,res)=>{
+    res.render('about')
 })
 
 // listen on port 
