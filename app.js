@@ -18,7 +18,7 @@ app.set('view engine','ejs')
 
 // navigation
 app.get('',(req,res)=>{
-    res.render('index')
+    res.render('index',{title:'Home Page'})
 })
 
 app.get('/about',(req,res)=>{
